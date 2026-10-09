@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-cm
+data:
+  # Intervalle auquel ArgoCD interroge le dépôt Git (défaut : 180s).
+  # Réduit pour que les changements soient visibles rapidement en démonstration.
+  timeout.reconciliation: 30s
+  timeout.reconciliation.jitter: 0s

@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: web
+  namespace: argocd
+spec:
+  project: default
+
+  # Source de vérité : le dépôt Git, la branche et le dossier Kustomize à déployer.
+  source:
+    repoURL: git@github.com:HanineKhemir/gitops-argocd-lab.git
+    targetRevision: main
+    path: app/overlays/dev
+
+  # Cible : le cluster où tourne ArgoCD, namespace demo.
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: demo
+
+  syncPolicy:
+    automated:
+      prune: true     # supprime du cluster ce qui a été retiré de Git
+      selfHeal: true  # annule toute modification manuelle faite sur le cluster
+    syncOptions:
+      - CreateNamespace=true
