@@ -1,0 +1,18 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - deployment.yaml
+  - service.yaml
+
+labels:
+  - pairs:
+      app.kubernetes.io/name: web
+      app.kubernetes.io/part-of: gitops-argocd-lab
+
+# Génère le ConfigMap à partir du fichier HTML. Kustomize suffixe son nom avec
+# un hash du contenu : modifier index.html change le nom, donc déclenche un rollout.
+configMapGenerator:
+  - name: web-html
+    files:
+      - index.html
