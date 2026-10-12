@@ -13,4 +13,4 @@ replicas:
 
 images:
   - name: nginx
-    newTag: 1.27-alpine
+    newTag: does-not-exist
