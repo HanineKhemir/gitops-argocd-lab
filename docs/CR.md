@@ -85,6 +85,8 @@ L'intervalle d'interrogation de Git a été réduit de 180 s à **30 s** (`timeo
 
 Après ce `kubectl apply`, **plus aucune ressource de l'application n'a été créée à la main** : le namespace `demo`, le ConfigMap, le Service et le Deployment ont tous été créés par ArgoCD à partir de Git.
 
+![Page servie par l'application sur localhost:8081](screenshots/app-page.png)
+
 **Seule exception à « tout est dans Git » :** le Secret contenant la clé privée SSH, volontairement absent du dépôt (`.secrets/` est ignoré par Git). En production, on utiliserait Sealed Secrets ou External Secrets pour versionner une forme chiffrée de ce secret.
 
 ## 5. Scénarios de démonstration
@@ -112,6 +114,10 @@ Historique Git produit pendant les démonstrations :
 | 23 s | `0b958a0` | Synced / Healthy | **4/4** |
 
 Le temps de réaction dépend du moment où tombe la prochaine interrogation de Git (au plus 30 s). Le bouton **Refresh** de l'UI force cette interrogation sans rien pousser vers le cluster.
+
+![Application synchronisée sur le commit 0b958a0](screenshots/s1-synced-0b958a0.png)
+
+L'UI indique **Synced to main (0b958a0)** et **Sync OK**, avec le message du commit « Scale web to 4 replicas » ; la colonne *Initiated by* de l'historique indique *automated sync policy* (aucune action manuelle).
 
 **Conclusion :** une modification dans Git suffit à modifier le cluster. Git est la source de vérité, ArgoCD est le seul acteur qui applique.
 
