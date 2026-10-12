@@ -19,7 +19,8 @@ spec:
 
   syncPolicy:
     automated:
-      prune: true     # supprime du cluster ce qui a été retiré de Git
+      enabled: true   # explicite : un rollback depuis l'UI le passe à false
+      prune: true    # supprime du cluster ce qui a été retiré de Git
       selfHeal: true  # annule toute modification manuelle faite sur le cluster
     syncOptions:
       - CreateNamespace=true
