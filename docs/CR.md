@@ -20,6 +20,7 @@
 ---
 
 **Dépôt :** https://github.com/HanineKhemir/gitops-argocd-lab
+
 **Outils :** kind (Kubernetes v1.36.1), ArgoCD v3.5.4, Kustomize (intégré à kubectl v1.34), GitHub
 
 ---
