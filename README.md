@@ -1,5 +1,7 @@
 # TP GitOps — Continuous Deployment avec ArgoCD
 
+**TP 1 : GitOps and Continuous Deployment** — GL4, Groupe 1 — Youssef Khalifa, Hanine Khemir, Oussema Said, Ahmed Amine Bououd.
+
 Pipeline GitOps de bout en bout : une application NGINX décrite avec Kustomize dans ce dépôt, déployée et maintenue par ArgoCD sur un cluster kind.
 
 **Compte rendu complet : [docs/CR.md](docs/CR.md)**

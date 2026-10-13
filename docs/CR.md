@@ -1,6 +1,24 @@
-# Compte rendu — TP GitOps : Continuous Deployment avec ArgoCD
+<p align="center">
+  <img src="assets/header-insat.png" alt="République Tunisienne — Ministère de l'Enseignement Supérieur et de la Recherche Scientifique — Université de Carthage — INSAT" width="100%">
+</p>
 
-**Auteur :** Hanine Khemir
+<h1 align="center">TP 1 : GitOps and Continuous Deployment</h1>
+<h3 align="center">Compte rendu — Continuous Deployment avec ArgoCD</h3>
+
+<p align="center">
+  <b>Réalisé par :</b><br>
+  Youssef Khalifa<br>
+  Hanine Khemir<br>
+  Oussema Said<br>
+  Ahmed Amine Bououd
+</p>
+
+<p align="center">
+  <b>Classe :</b> GL4 — Groupe 1
+</p>
+
+---
+
 **Dépôt :** https://github.com/HanineKhemir/gitops-argocd-lab
 **Outils :** kind (Kubernetes v1.36.1), ArgoCD v3.5.4, Kustomize (intégré à kubectl v1.34), GitHub
 
