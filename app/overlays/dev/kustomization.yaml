@@ -9,7 +9,7 @@ resources:
 # Les deux réglages modifiés pendant la démonstration.
 replicas:
   - name: web
-    count: 4
+    count: 3
 
 images:
   - name: nginx
