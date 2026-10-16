@@ -9,9 +9,9 @@ resources:
 # Les deux réglages modifiés pendant la démonstration.
 replicas:
   - name: web
-    count: 3
+    count: 4
 
 images:
   - name: nginx
-    # newTag: 1.27-alpine 
-    newTag: does-not-exist
+    newTag: 1.27-alpine 
+    # newTag: does-not-exist
